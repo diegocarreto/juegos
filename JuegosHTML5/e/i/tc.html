@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0," />
+    <title></title>
+    <style type="text/css">
+        *
+        {
+            -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+            -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */ /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+        }
+        body
+        {
+            background-color: #000000;
+            margin: 0px;
+        }
+        canvas
+        {
+            display: block;
+            position: absolute;
+        }
+        .container
+        {
+            width: auto;
+            text-align: center;
+            background-color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <script src="js/Vector2.js"></script>
+    <script>
+
+        var canvas, c, container, halfWidth, halfHeight, leftTouchID = -1, touchable = 'createTouch' in document, touches = [], 
+            leftTouchPos = new Vector2(0, 0), leftTouchStartPos = new Vector2(0, 0), leftVector = new Vector2(0, 0);
+
+        init();
+
+        if (touchable) {
+
+            canvas.addEventListener('touchstart', onTouchStart, false);
+            canvas.addEventListener('touchmove', onTouchMove, false);
+            canvas.addEventListener('touchend', onTouchEnd, false);
+
+            window.onorientationchange = resetCanvas;
+            window.onresize = resetCanvas;
+        }
+
+        function resetCanvas(e) {
+
+            //Cambia el tamanio del canvas 
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            halfWidth = canvas.width / 2;
+            halfHeight = canvas.height / 2;
+
+            //Desplaza el scroll hasta la parte superior izquierda
+            window.scrollTo(0, 0);
+        }
+
+        function draw() {
+
+            c.clearRect(0, 0, canvas.width, canvas.height);
+
+            //identifica si el dispositivo es tactil
+            if (touchable) {
+
+                //Recorre los eventos tactiles
+                for (var i = 0; i < touches.length; i++) {
+
+                    var touch = touches[i];
+
+                    //Si el id del evento es el mismo del evento del jostick lo muestra
+                    if (touch.identifier == leftTouchID) {
+
+                        //Circulo exterior
+                        c.beginPath();
+                        c.strokeStyle = "gray";
+                        c.lineWidth = 2;
+                        c.arc(leftTouchStartPos.x, leftTouchStartPos.y, 60, 0, Math.PI * 2, true);
+                        c.stroke();
+
+                        //Jostick
+                        c.beginPath();
+                        c.strokeStyle = "gray";
+                        c.lineWidth = 6;
+                        c.arc(leftTouchStartPos.x, leftTouchStartPos.y, 40, 0, Math.PI * 2, true);
+                        c.stroke();
+
+                        //Palanca
+                        c.beginPath();
+                        c.strokeStyle = "gray";
+                        c.arc(leftTouchPos.x, leftTouchPos.y, 40, 0, Math.PI * 2, true);
+                        c.stroke();
+                    }
+                    else {
+
+                        c.beginPath();
+                        c.strokeStyle = "gray";
+                        c.lineWidth = "5";
+                        c.arc(touch.clientX, touch.clientY, 40, 0, Math.PI * 2, true);
+                        c.stroke();
+                    }
+                }
+
+                Movimiento(leftVector.x, leftVector.y);
+            }
+        }
+
+        function Disparar() {
+
+            c.fillStyle = "white";
+            c.fillText("disparo", 50, 50);
+        }
+
+        function Movimiento(x, y) {
+
+            c.fillStyle = "white";
+            c.fillText("x:" + x + " " + "y:" + y, 150, 150);
+        }
+
+        function onTouchStart(e) {
+
+            for (var i = 0; i < e.changedTouches.length; i++) {
+
+                var touch = e.changedTouches[i];
+
+                //Detecta la posicion en la cual se realizo el contacto
+                //Si es de la mitad de la pantalla a la izquierda se muestra el jostick
+                if ((leftTouchID < 0) && (touch.clientX < halfWidth)) {
+
+                    //Asigna el identificador del jostick
+                    leftTouchID = touch.identifier;
+
+                    //Coloca el jostick en la posicion del contacto
+                    leftTouchStartPos.reset(touch.clientX, touch.clientY);
+
+                    //Coloca la palanca en la misma posicion del jostick
+                    leftTouchPos.copyFrom(leftTouchStartPos);
+
+                    //Resetea el valor de la palanca a 0
+                    leftVector.reset(0, 0);
+
+                    continue;
+                }
+                else
+                    Disparar();
+            }
+            //Asigna la nueva matriz de contactos
+            touches = e.touches;
+        }
+
+        //Decta el movimiento sobre la pantalla
+        function onTouchMove(e) {
+
+            // Evita el scroll y zoom de la pagina
+            e.preventDefault();
+
+            //Recorre la matriz de contacto en busca del jostick
+            for (var i = 0; i < e.changedTouches.length; i++) {
+
+                var touch = e.changedTouches[i];
+
+                //Si el contacto es el jostick
+                if (leftTouchID == touch.identifier) {
+
+                    //Cambia la posicion de la palanca
+                    leftTouchPos.reset(touch.clientX, touch.clientY);
+
+                    //Copia los valores al nuevo vector
+                    leftVector.copyFrom(leftTouchPos);
+
+                    break;
+                }
+            }
+            //Asigna la nueva matriz de contactos
+            touches = e.touches;
+        }
+
+        function onTouchEnd(e) {
+
+            //Recorre la matriz de contacto en busca del jostick
+            for (var i = 0; i < e.changedTouches.length; i++) {
+
+                var touch = e.changedTouches[i];
+
+                //Si el contacto es el jostick
+                if (leftTouchID == touch.identifier) {
+
+                    leftTouchID = -1;
+                    leftVector.reset(0, 0);
+                    break;
+                }
+            }
+            //Asigna la nueva matriz de contactos
+            touches = e.touches;
+        }
+
+        function init() {
+
+            canvas = document.createElement('canvas');
+            c = canvas.getContext('2d');
+            container = document.createElement('div');
+            container.className = "container";
+
+            document.body.appendChild(container);
+            container.appendChild(canvas);
+
+            resetCanvas();
+
+            c.strokeStyle = "#ffffff";
+            c.lineWidth = 2;
+
+            setInterval(draw, 1000 / 35);
+        }
+
+    </script>
+</body>
+</html>

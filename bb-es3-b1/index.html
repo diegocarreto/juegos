@@ -1,0 +1,160 @@
+﻿<!DOCTYPE HTML>
+<html>
+   <head>
+      <meta charset="utf-8" />
+       <meta name="viewport" content="width=device-width, initial-scale=1" user-scalable="no">
+      <title></title>
+      <link rel="stylesheet" href="1nterfaz/interfaz.css" type="text/css" />
+      <link rel="stylesheet" href="css/activity.css"  type="text/css" />
+      <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="css/anims.css"  type="text/css" />
+      <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+      <script src="js/jquery.browser.min.js" type="text/javascript"></script>
+      <script type="text/javascript" src="config.js"></script>
+      <script type="text/javascript" src="1nterfaz/jquery.touchSwipe.min.js"></script>
+      <script type="text/javascript" src="1nterfaz/sugerencias.js"></script>
+      <script type="text/javascript" src="1nterfaz/interfaz.js"></script>
+      <script type="text/javascript" src="1nterfaz/multipanel.js"></script>
+
+      <!-- scripts juego -->
+
+       <script src="js/c2runtime.js" type="text/javascript"></script>
+       <!-- fin scripts juego -->
+   </head>
+
+   <body>
+      <!-- +++++ Pantalla de Inicio +++++++ -->
+      <section id="splash">
+         <!-- Nave -->
+         <div class="spaceship">
+            <div class="motor2"></div>
+            <div class="motor1"></div>
+            <img src="img/nave2.png">
+         </div>
+         <!-- Asteroides de letras -->
+         <div class="rescataletras"><img src="img/titulo.png"></div>
+         <div class="ltUno letteroids">S</div>
+         <div class="ltDos letteroids">a</div>
+         <div class="ltTres letteroids">m</div>
+         <div class="ltCuatro letteroids">i</div>
+         <div class="ltCinco letteroids">e</div>
+         <div class="ltSeis letteroids">x</div>
+         <div class="ltSiete letteroids">u</div>    
+      </section>
+
+      <!-- +++++ FIN Pantalla de Inicio +++++++ -->
+
+      <!-- +++++ Contenido +++++++ -->
+      <div id="activity">
+         <div id="panelReel">
+
+            <div class="canvasContainer">
+                <!-- Canvas juego -->
+               <canvas id="c2canvas" width="790" height="560" style="border: 1px solid #000" data-character="0" class="showNoDiv">
+                        Canvas no soportado por tu explorador
+               </canvas>
+                <!-- FIN juego -->
+
+               <!-- Intro y Selección -->
+               <div class="canvasDiv">
+                  <div class="space-text">
+                     <p>Los tripulantes de la nave ABC123 tienen una misi&oacute;n especial:</p>
+                     <p class="light">&iexcl;Salvar a los habitantes del planeta Letra!</p>
+                     <p class="light">Ellos que fueron capturados por malvados seres del Planeta Ignorantum</p>
+                     <p class="bold">&iexcl;Ay&uacute;dalos!</p>
+                  </div>
+                  <div class="spaceDiv space-background"></div>
+                  <div class="spaceDiv space-stellar"></div>
+                  <div class="spaceDiv space-stars"></div>
+                  <div class="spaceDiv spacePlanets space-planets6"></div>
+                  <div class="spaceDiv spacePlanets space-planets1"></div>
+                  <div class="spaceDiv spacePlanets space-planets2"></div>
+                  <div class="spaceDiv spacePlanets space-planets3"></div>
+                  <div class="spaceDiv spacePlanets space-planets4"></div>
+                  <div class="spaceDiv spacePlanets space-planets5"></div>
+                  <div class="spaceDiv mainPlanet space-planets7"></div>
+                  <div class="space-spaceship">
+                     <div class="spaceship-flames">
+                        <img src="img/flama1.png" class="spaceship-flame spaceship-flame1" alt="">
+                        <img src="img/flama1.png" class="spaceship-flame spaceship-flame2" alt="">
+                     </div>
+                     <div class="spaceship-flam">
+                        <img src="img/flama1.png" class="spaceship-flame spaceship-flame1" alt="">
+                        <img src="img/flama1.png" class="spaceship-flame spaceship-flame2" alt="">
+                     </div>
+                     <div class="spaceship-body">
+                        <img src="img/nave.png" alt="">
+                     </div>
+                  </div>
+                  <div class="space-button">
+                     <a href="#">&iexcl;Al rescate!</a>
+                  </div>
+                  <div class="modalWindow" data-init="true">
+                     <h2>Escoge un tripulante</h2>
+                     <div class="astronautas">
+                        <div class="astronauta astrogirl1" data-character="1">
+                           <div class="astronauta-body"></div>
+                           <div class="astronauta-hand"></div>
+                        </div>
+                        <div class="astronauta astroboy1" data-character="2">
+                           <div class="astronauta-body"></div>
+                           <div class="astronauta-hand"></div>
+                        </div>
+                        <div class="astronauta astrogirl2" data-character="3">
+                           <div class="astronauta-body"></div>
+                           <div class="astronauta-hand"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>  
+               <!-- FIN Intro-->
+            </div>  
+         </div> <!-- fin panelReel -->      
+      </div><!-- fin activity -->
+      
+      <div class="divFondo"><div class="cosmo"></div></div> <!-- fondo general -->
+
+   </body>
+   <script src="js/scripts.js"></script>
+      <script>
+            // En la carga del DOM...
+            (function(){
+               // Fondo principal
+               $('.space-background').moveObj({interval: 80});
+               // Fondo de aurora boreal
+               $('.space-stellar').moveObj({interval: 40});
+               // Fondo de estrellas
+               $('.space-stars').moveObj({interval: 10});
+               // Satélite gris
+               $('.space-planets5').moveObj({interval: 10});
+               // Luna
+               $('.space-planets4').moveObj({interval: 50});
+               // Planeta naranja
+               $('.space-planets3').moveObj({interval: 100});
+               // Satélite naranja con verde
+               $('.space-planets2').moveObj({interval: 200});
+               // Planeta azul
+               $('.space-planets1').moveObj({interval: 500});
+               // Planeta verde
+               $('.space-planets6').moveObj({interval: 1000});
+               // Nave
+               $('.space-spaceship').moveSpaceship();
+               // Flama superior
+               $('.spaceship-flames .spaceship-flame1').toggleClase({ clase: 'bigFlame'});
+               // Flama inferior
+               $('.spaceship-flames .spaceship-flame2').toggleClase({ clase: 'bigFlame'});
+               // Al presionar el botón, ir al planeta
+               $('.space-button').gotoPlanet({
+                  initCanvas: function(numJug, inicio){
+
+                      InitGame(numJug, inicio);
+                  }
+               });
+               // Texto que se escribe al inicio
+               $('.space-text').typwriter();
+//               $('canvas').click(function(){
+//                  showmeChar(this, '.modalWindow', false);
+//               });
+            })();
+         </script>
+</html>

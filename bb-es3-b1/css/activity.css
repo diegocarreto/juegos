@@ -1,0 +1,29 @@
+#splash {
+	width:790px;
+	height:346px;
+	margin:0 auto;
+	text-align: center;
+}
+
+#panelReel {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#panelReel > * {
+	position:relative;
+	display:block;
+	width: 790px;
+	height:560px;
+	}
+
+#activity {
+	width: 790px;
+	height:560px;
+	
+	/*Estas propiedades pueden modificarse si llegase a ser necesario*/	
+	margin:auto;
+	overflow:hidden;
+	border: dashed 3px;	
+}

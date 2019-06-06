@@ -1,0 +1,105 @@
+ *{
+         color: white;
+      }
+
+
+    @font-face {
+  font-family:'trade';
+  src: url('fonts/trade_regulart.eot');
+  src: url('fonts/trade_regulart.eot?#iefix') format('embedded-opentype'), url('fonts/trade_regular.woff') format('woff'), url('fonts/trade_regular.ttf') format('truetype'), url('fonts/trade_regular.svg#trade_regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+} 
+
+@font-face {
+  font-family:'museo';
+  src: url('fonts/museo700-regular.eot');
+  src: url('fonts/museo700-regular.eot?#iefix') format('embedded-opentype'), url('fonts/museo700-regular.woff') format('woff'), url('fonts/museo700-regular.ttf') format('truetype'), url('fonts/museo700-regular.svg#museo_700regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}     
+      body{
+  
+        overflow: hidden;
+         
+      }
+
+      header{
+padding-left: 20px;
+padding-top: 10px;
+      }
+h1{font-family:museo;
+font-size: 18px;
+}
+
+h2{
+	
+font-size: 13px;	
+	}
+
+
+
+#panelReel{
+overflow: hidden;
+width: 365px;
+height: 245px;
+margin:0;
+position: absolute;
+
+      }
+
+#panelReel > *{
+
+position: relative;
+margin:0;
+float: left;
+width: 365px;
+height: 245px;
+font-family:trade;
+font-size: 11px;
+
+      }
+
+#panelReel article{
+display: block;
+padding: 20px;
+padding-top:0;
+width: 325px;
+height: 205px;
+
+}
+
+      footer{
+   position:absolute;
+   bottom:0;
+   width:100%;
+      }
+
+#sugPaging {
+ 
+   float: right;
+   margin-right: 20px;
+
+}
+
+nav #sugPaging li{
+display: inline;
+cursor: pointer; 
+
+
+}
+
+#sugPaging a{
+
+width: 30px;
+width: 30px;
+
+}
+
+table, td{
+
+  margin: 0 auto;
+  border: solid white 1px;
+  padding: 4px;
+
+}

@@ -1,0 +1,119 @@
+#juegoTetris
+{
+    background: #e6e6e6;
+    width: 900px;
+    height: 450px;
+}
+input[type=text]
+{
+    background: none;
+    width: 65px;
+    font-size: 22px;
+    text-align: center;
+    color: #ffec00;
+    focus: none;
+    border-color: #000;
+    border-width: 0;
+}
+
+.fondoTetris
+{
+    background: url("images/fondoModalTetris.jpg");
+    width: 900px;
+    height: 450px;
+}
+.canvasTetris
+{
+    position: absolute;
+    width: 250px;
+    height: 400px;
+    margin: 35px 0 0 215px;
+}
+
+.canvasMensajes
+{
+    position: absolute;
+    width: 250px;
+    height: 30px;
+    margin: 145px 0 0 215px;
+    text-align:center;
+    color: #ffec00;
+    font-family:"Times New Roman", Times, serif;
+    font-size:18px;
+    font-weight:bold;
+}
+.marcador
+{
+    background: url("images/marcadorTetris.png");
+    width: 91px;
+    height: 269px;
+    position: absolute;
+    margin: 40px 0 0 485px;
+}
+
+.marcador .tetrisNivel
+{
+    margin: 36px 0 0 4px;
+}
+.marcador .tetrisLineas
+{
+    margin: 65px 0 0 4px;
+}
+.marcador .tetrisPuntos
+{
+    margin: 68px 0 0 4px;
+}
+.tetrisInstrucciones
+{
+    background: url("images/instruccionesTetris_desk.png");
+    width: 287px;
+    height: 294px;
+    position: absolute;
+    margin: 120px 0 0 598px;
+}
+
+
+.tetris
+{
+    border-collapse: collapse;
+    border-color: Transparent;
+}
+.tetris tr td
+{
+    width: 21px;
+    height: 20px;
+    padding: 0px;
+    border-color: Transparent;
+}
+.celda0
+{
+    background-color: Transparent;
+}
+.celda1
+{
+    background-image: url('images/amarillo.png');
+}
+.celda2
+{
+    background-image: url('images/azul.png');
+}
+.celda3
+{
+    background-image: url('images/cyan.png');
+}
+.celda4
+{
+    background-image: url('images/magenta.png');
+}
+.celda5
+{
+    background-image: url('images/naranja.png');
+}
+.celda6
+{
+    background-image: url('images/rojo.png');
+}
+.celda7
+{
+    background-image: url('images/verde.png');
+}

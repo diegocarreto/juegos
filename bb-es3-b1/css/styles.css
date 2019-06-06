@@ -1,0 +1,684 @@
+@font-face {
+  font-family: 'Lobster';
+  src: url('fonts/lobster-webfont.eot');
+  src: url('fonts/lobster-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/lobster-webfont.woff') format('woff'), url('fonts/lobster-webfont.ttf') format('truetype'), url('fonts/lobster-webfont.svg#lobster') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OmnesLight';
+  src: url('fonts/omnes_extralight-webfont.eot');
+  src: url('fonts/omnes_extralight-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/omnes_extralight-webfont.woff') format('woff'), url('fonts/omnes_extralight-webfont.ttf') format('truetype'), url('fonts/omnes_extralight-webfont.svg#OmnesLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OmnesMedium';
+  src: url('fonts/omnes_medium-webfont.eot');
+  src: url('fonts/omnes_medium-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/omnes_medium-webfont.woff') format('woff'), url('fonts/omnes_medium-webfont.ttf') format('truetype'), url('fonts/omnes_medium-webfont.svg#OmnesMedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Diego */
+:fullscreen #c2canvas{
+     width: 100% !important;
+     height: 100% !important;
+ }
+ :-webkit-full-screen #c2canvas{
+     width: 100% !important;
+     height: 100% !important;
+ }
+ -moz-full-screen #c2canvas{
+     width: 100% !important;
+     height: 100% !important;
+ }
+
+.canvasContainer {
+  margin: auto;
+  overflow: hidden;
+  text-align: center;
+  height: 560px;
+  width: 790px;
+  font-family: 'Arial', Arial;
+  font-style: normal;
+  font-weight: normal;
+}
+.canvasContainer .showNoDiv {
+  display: none;
+}
+.canvasContainer .hideItem {
+  -webkit-transition: 1s;
+  -khtml-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.canvasContainer .canvasDiv {
+  background: #000000;
+  position: relative;
+  height: 560px;
+  width: 790px;
+}
+.canvasContainer .canvasDiv .space-text {
+  color: #fff;
+  font-size: 25px;
+  padding: 20px 50px;
+  position: absolute;
+  text-align: left;
+  top: 20px;
+  left: 20px;
+  width: 650px;
+  text-shadow: 1px 1px 0 #000;
+  z-index: 5;
+  font-family: 'OmnesLight', Arial;
+  font-style: normal;
+  font-weight: normal;
+}
+.canvasContainer .canvasDiv .space-text p {
+  margin: 2px 0;
+}
+.canvasContainer .canvasDiv .space-text .light {
+  font-size: 20px;
+}
+.canvasContainer .canvasDiv .space-text .bold {
+  font-size: 30px;
+  font-family: 'OmnesMedium', Arial;
+  font-style: normal;
+  font-weight: normal;
+}
+.canvasContainer .canvasDiv .spaceDiv {
+  background-image: url("../img/fondo.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 800px;
+  width: 1200px;
+}
+.canvasContainer .canvasDiv .spaceDiv.space-background {
+  background-image: url("../img/fondo.jpg");
+}
+.canvasContainer .canvasDiv .spaceDiv.space-stellar {
+  background-image: url("../img/estela.png");
+}
+.canvasContainer .canvasDiv .spaceDiv.space-stars {
+  background-image: url("../img/estrellas.png");
+}
+.canvasContainer .canvasDiv .spaceDiv.space-planets1 {
+  background-image: url("../img/planetas1.svg");
+}
+.canvasContainer .canvasDiv .spaceDiv.space-planets2 {
+  background-image: url("../img/planetas2.svg");
+}
+.canvasContainer .canvasDiv .spaceDiv.space-planets3 {
+  background-image: url("../img/planetas3.svg");
+}
+.canvasContainer .canvasDiv .spaceDiv.space-planets4 {
+  background-image: url("../img/planetas4.svg");
+}
+.canvasContainer .canvasDiv .spaceDiv.space-planets5 {
+  background-image: url("../img/planetas5.svg");
+}
+.canvasContainer .canvasDiv .spaceDiv.space-planets6 {
+  background-image: url("../img/planetas6.svg");
+}
+.canvasContainer .canvasDiv .spaceDiv.space-planets7 {
+  background-image: url("../img/planetas7.svg");
+  left: 2000px;
+}
+.canvasContainer .canvasDiv .space-spaceship {
+  left: 50%;
+  margin-left: -250px;
+  position: absolute;
+  top: 80px;
+  height: 500px;
+  width: 500px;
+  -webkit-transition: left 2s;
+  -khtml-transition: left 2s;
+  -moz-transition: left 2s;
+  -ms-transition: left 2s;
+  -o-transition: left 2s;
+  transition: left 2s;
+}
+.canvasContainer .canvasDiv .space-spaceship.blurMe {
+  left: 1000px;
+}
+.canvasContainer .canvasDiv .space-spaceship.blurMe .spaceship-body {
+  background: url("../img/naveBlur.png");
+  background-position: 0 105px;
+  background-repeat: no-repeat;
+  width: 800px;
+}
+.canvasContainer .canvasDiv .space-spaceship.blurMe .spaceship-body img {
+  display: none;
+}
+.canvasContainer .canvasDiv .space-spaceship.blurMe .spaceship-flames {
+  display: none;
+}
+.canvasContainer .canvasDiv .space-spaceship.gotPlanet {
+  -webkit-transition: none;
+  -khtml-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+  left: -800px;
+}
+.canvasContainer .canvasDiv .space-spaceship.arrivePlanet {
+  -webkit-transition: 2s;
+  -khtml-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+  left: 650px;
+  top: 320px;
+}
+.canvasContainer .canvasDiv .space-spaceship.arrivePlanet .spaceship-body {
+  height: 50px;
+  width: 50px;
+}
+.canvasContainer .canvasDiv .space-spaceship.arrivePlanet .spaceship-body img {
+  -webkit-transition: 2s;
+  -khtml-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+  height: 50px;
+  width: 50px;
+}
+.canvasContainer .canvasDiv .space-spaceship.arrivePlanet .spaceship-flames {
+  display: none;
+}
+.canvasContainer .canvasDiv .space-spaceship.arrivePlanet .spaceship-flam {
+  display: block;
+}
+.canvasContainer .canvasDiv .space-spaceship .spaceship-body {
+  background-image: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 500px;
+  width: 500px;
+}
+.canvasContainer .canvasDiv .space-spaceship .spaceship-body img {
+  height: 420px;
+  width: 420px;
+}
+.canvasContainer .canvasDiv .space-spaceship .spaceship-flames,
+.canvasContainer .canvasDiv .space-spaceship .spaceship-flam {
+  position: relative;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.canvasContainer .canvasDiv .space-spaceship .spaceship-flames .spaceship-flame,
+.canvasContainer .canvasDiv .space-spaceship .spaceship-flam .spaceship-flame {
+  position: absolute;
+}
+.canvasContainer .canvasDiv .space-spaceship .spaceship-flames .spaceship-flame.bigFlame,
+.canvasContainer .canvasDiv .space-spaceship .spaceship-flam .spaceship-flame.bigFlame {
+  width: 300px;
+}
+.canvasContainer .canvasDiv .space-spaceship .spaceship-flames .spaceship-flame1,
+.canvasContainer .canvasDiv .space-spaceship .spaceship-flam .spaceship-flame1 {
+  height: 70px;
+  left: 12px;
+  top: 81px;
+  width: 135px;
+}
+.canvasContainer .canvasDiv .space-spaceship .spaceship-flames .spaceship-flame1.bigFlame,
+.canvasContainer .canvasDiv .space-spaceship .spaceship-flam .spaceship-flame1.bigFlame {
+  left: -132px;
+}
+.canvasContainer .canvasDiv .space-spaceship .spaceship-flames .spaceship-flame2,
+.canvasContainer .canvasDiv .space-spaceship .spaceship-flam .spaceship-flame2 {
+  height: 50px;
+  left: 86px;
+  top: 195px;
+  width: 96px;
+}
+.canvasContainer .canvasDiv .space-spaceship .spaceship-flames .spaceship-flame2.bigFlame,
+.canvasContainer .canvasDiv .space-spaceship .spaceship-flam .spaceship-flame2.bigFlame {
+  left: -92px;
+}
+.canvasContainer .canvasDiv .space-spaceship .spaceship-flam {
+  display: none;
+}
+.canvasContainer .canvasDiv .space-spaceship .spaceship-flam .spaceship-flame {
+  height: auto;
+  width: 10px;
+}
+.canvasContainer .canvasDiv .space-spaceship .spaceship-flam .spaceship-flame1 {
+  top: 18px;
+  left: 5px;
+}
+.canvasContainer .canvasDiv .space-spaceship .spaceship-flam .spaceship-flame2 {
+  top: 25px;
+  left: 6px;
+}
+.canvasContainer .canvasDiv .space-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  height: 90px;
+  width: 210px;
+  margin-top: 200px;
+}
+.canvasContainer .canvasDiv .space-button a {
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  background-color: transparent;
+  background-image: url("../img/botonRescate.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  line-height: 270px;
+  overflow: hidden;
+  text-indent: 630px;
+  height: 90px;
+  width: 210px;
+}
+.canvasContainer .canvasDiv .space-button a a {
+  display: block;
+}
+.canvasContainer .canvasDiv .space-button a:hover {
+  background-position: 0 -90px;
+}
+.canvasContainer .canvasDiv .space-button a.active1,
+.canvasContainer .canvasDiv .space-button a.glowMe {
+  background-position: 0 -180px;
+}
+.canvasContainer .canvasDiv .space-button a.active2 {
+  background-position: 0 -270px;
+}
+.canvasContainer .canvasDiv .space-button a.active3 {
+  background-position: 0 -360px;
+}
+.canvasContainer .canvasDiv .space-button a.active4 {
+  background-position: 0 -450px;
+}
+.canvasContainer .canvasDiv .space-button a.active5 {
+  background-position: 0 -540px;
+}
+.canvasContainer .canvasDiv .modalWindow {
+  background: url("../img/insideSpaceship.svg");
+  border: 10px solid #ffffff;
+  display: none;
+  z-index: 5;
+  -webkit-box-shadow: 0 0 50px #00ffff;
+  -khtml-box-shadow: 0 0 50px #00ffff;
+  -moz-box-shadow: 0 0 50px #00ffff;
+  -ms-box-shadow: 0 0 50px #00ffff;
+  -o-box-shadow: 0 0 50px #00ffff;
+  box-shadow: 0 0 50px #00ffff;
+  height: 420px;
+  left: 50%;
+  margin: -210px 0 0 -295px;
+  position: absolute;
+  top: 50%;
+  width: 590px;
+}
+.canvasContainer .canvasDiv .modalWindow h2 {
+  color: #ff0;
+  font-size: 50px;
+  min-height: 63px;
+  text-shadow: 0 0 10px #000;
+  font-family: 'Lobster', Arial;
+  font-style: normal;
+  font-weight: normal;
+}
+.canvasContainer .canvasDiv .modalWindow .astronautas {
+  margin-top: -60px;
+  position: relative;
+  overflow: hidden;
+  height: 334px;
+  width: 590px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta {
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  width: 255px;
+  -webkit-transition: 1s;
+  -khtml-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta:hover {
+  -webkit-filter: drop-shadow(0 0 5px #000000);
+  -khtml-filter: drop-shadow(0 0 5px #000000);
+  -moz-filter: drop-shadow(0 0 5px #000000);
+  -ms-filter: drop-shadow(0 0 5px #000000);
+  -o-filter: drop-shadow(0 0 5px #000000);
+  filter: drop-shadow(0 0 5px #000000);
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta .astronauta-body {
+  float: right;
+  background-color: transparent;
+  background-image: url("../img/astroboy1.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  line-height: 1197px;
+  overflow: hidden;
+  text-indent: 657px;
+  height: 399px;
+  width: 219px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta .astronauta-body a {
+  display: block;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta .astronauta-hand {
+  position: absolute;
+  left: 0;
+  top: 150px;
+  background-color: transparent;
+  background-image: url("../img/manos.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  line-height: 210px;
+  overflow: hidden;
+  text-indent: 210px;
+  height: 70px;
+  width: 70px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta .astronauta-hand a {
+  display: block;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.animateMe .astronauta-hand {
+  display: none;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.animateMe .astronauta-body {
+  height: 410px;
+  width: 220px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.animateMe.animateMe8 .astronauta-body {
+  background-position: -1760px 0px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.animateMe.animateMe7 .astronauta-body {
+  background-position: -1540px 0px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.animateMe.animateMe6 .astronauta-body {
+  background-position: -1320px 0px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.animateMe.animateMe5 .astronauta-body {
+  background-position: -1100px 0px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.animateMe.animateMe4 .astronauta-body {
+  background-position: -880px 0px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.animateMe.animateMe3 .astronauta-body {
+  background-position: -660px 0px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.animateMe.animateMe2 .astronauta-body {
+  background-position: -440px 0px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.animateMe.animateMe1 .astronauta-body {
+  background-position: -220px 0px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.animateMe.animateMe0 .astronauta-body {
+  background-position: 0px 0px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl1 {
+  right: -500px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl1.showMeFront {
+  right: -17px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl1 .astronauta-body {
+  background-image: url("../img/astrogirl1.svg");
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl1 .astronauta-hand {
+  background-position: -70px 0;
+  left: 13px;
+  top: 140px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl1 .astronauta-hand.shakeHand1,
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl1 .astronauta-hand.shakeHand9 {
+  background-position: -70px 0;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl1 .astronauta-hand.shakeHand2,
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl1 .astronauta-hand.shakeHand8 {
+  background-position: -70px -70px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl1 .astronauta-hand.shakeHand3,
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl1 .astronauta-hand.shakeHand7 {
+  background-position: -70px -140px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl1 .astronauta-hand.shakeHand4,
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl1 .astronauta-hand.shakeHand6 {
+  background-position: -70px -210px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl1 .astronauta-hand.shakeHand5 {
+  background-position: -70px -280px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl1.animateMe .astronauta-body {
+  background-image: url("../img/animacionAstrogirl1.png");
+  float: none;
+  margin: -33px 0 0 21px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl1.animateMe8 {
+  right: -57px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl1.animateMe9 {
+  right: -97px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl1.animateMe9 .astronauta-body {
+  background-position: -1540px 0px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl1.animateMe10 {
+  background-position: -1540px 0px;
+  right: -137px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl1.animateMe10 .astronauta-body {
+  background-position: -1760px 0px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl1.animateMe11 {
+  right: -177px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl1.animateMe11 .astronauta-body {
+  background-position: -1540px 0px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl1.animateMe12 {
+  right: -217px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl1.animateMe12 .astronauta-body {
+  background-position: -1760px 0px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2 {
+  left: -500px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2.showMeFront {
+  left: -7px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2 .astronauta-body {
+  background-image: url("../img/astrogirl2.svg");
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2 .astronauta-hand,
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2.shakeHand9 {
+  background-position: -140px 0;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2 .astronauta-hand.shakeHand1,
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2.shakeHand9.shakeHand1 {
+  background-position: -140px 0;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2 .astronauta-hand.shakeHand2,
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2.shakeHand9.shakeHand2,
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2 .astronauta-hand.shakeHand8,
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2.shakeHand9.shakeHand8 {
+  background-position: -140px -70px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2 .astronauta-hand.shakeHand3,
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2.shakeHand9.shakeHand3,
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2 .astronauta-hand.shakeHand7,
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2.shakeHand9.shakeHand7 {
+  background-position: -140px -140px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2 .astronauta-hand.shakeHand4,
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2.shakeHand9.shakeHand4,
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2 .astronauta-hand.shakeHand6,
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2.shakeHand9.shakeHand6 {
+  background-position: -140px -210px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2 .astronauta-hand.shakeHand5,
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2.shakeHand9.shakeHand5 {
+  background-position: -140px -280px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2.animateMe .astronauta-body {
+  background-image: url("../img/animacionAstrogirl2.png");
+  float: none;
+  margin: -12px 0 0 3px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2.animateMe8 {
+  left: 123px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2.animateMe9 {
+  left: 233px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2.animateMe9 .astronauta-body {
+  background-position: -1540px 0px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2.animateMe10 {
+  left: 353px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2.animateMe10 .astronauta-body {
+  background-position: -1760px 0px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2.animateMe11 {
+  left: 473px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2.animateMe11 .astronauta-body {
+  background-position: -1540px 0px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2.animateMe12 {
+  left: 593px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astrogirl2.animateMe12 .astronauta-body {
+  background-position: -1760px 0px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astroboy1 {
+  top: 1000px;
+  z-index: 1;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astroboy1.showMeFront {
+  top: 30px;
+  left: 187px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astroboy1 .astronauta-body {
+  background-image: url("../img/astroboy1.svg");
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astroboy1 .astronauta-hand {
+  background-position: 0 0;
+  left: 4px;
+  top: 136px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astroboy1 .astronauta-hand.shakeHand1,
+.canvasContainer .canvasDiv .modalWindow .astronauta.astroboy1 .astronauta-hand.shakeHand9 {
+  background-position: 0 0;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astroboy1 .astronauta-hand.shakeHand2,
+.canvasContainer .canvasDiv .modalWindow .astronauta.astroboy1 .astronauta-hand.shakeHand8 {
+  background-position: 0 -70px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astroboy1 .astronauta-hand.shakeHand3,
+.canvasContainer .canvasDiv .modalWindow .astronauta.astroboy1 .astronauta-hand.shakeHand7 {
+  background-position: 0 -140px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astroboy1 .astronauta-hand.shakeHand4,
+.canvasContainer .canvasDiv .modalWindow .astronauta.astroboy1 .astronauta-hand.shakeHand6 {
+  background-position: 0 -210px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astroboy1 .astronauta-hand.shakeHand5 {
+  background-position: 0 -280px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astroboy1.animateMe .astronauta-body {
+  background-image: url("../img/animacionAstroboy1.png");
+  float: none;
+  margin: -31px 0 0 11px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astroboy1.animateMe8 {
+  left: 267px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astroboy1.animateMe9 {
+  left: 347px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astroboy1.animateMe9 .astronauta-body {
+  background-position: -1540px 0px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astroboy1.animateMe10 {
+  left: 427px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astroboy1.animateMe10 .astronauta-body {
+  background-position: -1760px 0px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astroboy1.animateMe11 {
+  left: 507px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astroboy1.animateMe11 .astronauta-body {
+  background-position: -1540px 0px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astroboy1.animateMe12 {
+  left: 587px;
+}
+.canvasContainer .canvasDiv .modalWindow .astronauta.astroboy1.animateMe12 .astronauta-body {
+  background-position: -1760px 0px;
+}
+.msie9 .space-planets,
+.msie8 .space-planets,
+.msie7 .space-planets {
+  background-image: url("../img/planetas1.png");
+}
+.msie9 .space-planets.spacePlanets2,
+.msie8 .space-planets.spacePlanets2,
+.msie7 .space-planets.spacePlanets2 {
+  background-image: url("../img/planetas1.png");
+}
+.msie9 .space-planets.spacePlanets2,
+.msie8 .space-planets.spacePlanets2,
+.msie7 .space-planets.spacePlanets2 {
+  background-image: url("../img/planetas2.png");
+}
+.msie9 .space-planets.spacePlanets3,
+.msie8 .space-planets.spacePlanets3,
+.msie7 .space-planets.spacePlanets3 {
+  background-image: url("../img/planetas3.png");
+}
+.msie9 .space-planets.spacePlanets4,
+.msie8 .space-planets.spacePlanets4,
+.msie7 .space-planets.spacePlanets4 {
+  background-image: url("../img/planetas4.png");
+}
+.msie9 .space-planets.spacePlanets5,
+.msie8 .space-planets.spacePlanets5,
+.msie7 .space-planets.spacePlanets5 {
+  background-image: url("../img/planetas5.png");
+}
+.msie9 .space-planets.spacePlanets6,
+.msie8 .space-planets.spacePlanets6,
+.msie7 .space-planets.spacePlanets6 {
+  background-image: url("../img/planetas6.png");
+}
+.msie9 .space-planets.spacePlanets7,
+.msie8 .space-planets.spacePlanets7,
+.msie7 .space-planets.spacePlanets7 {
+  background-image: url("../img/planetas6.png");
+}
+.msie9 .modalWindow,
+.msie8 .modalWindow,
+.msie7 .modalWindow {
+  background-image: url("../img/insideSpaceship.png");
+}

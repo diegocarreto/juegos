@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cars>
+   <webfont>Playball</webfont>
+   
+   <mainTitle1>Arrancones</mainTitle1>
+   <mainTitle2>ChocoMilk</mainTitle2>
+   <startRaceText>¡Arranca!</startRaceText>
+   <raceAgainText>Race again</raceAgainText>
+   
+   <chooseYourOpponent>Elige a tu oponente!</chooseYourOpponent>
+   <maxSpeedText>Max speed:</maxSpeedText>
+   <accelerationText>Aceleración:</accelerationText>
+   <raceLengthText>Aceleración:</raceLengthText>
+   
+   <maxSpeed>1000</maxSpeed>
+   <acceleration>151</acceleration>
+   <deceleration>150</deceleration>
+   <angleSpeedDivisor>20</angleSpeedDivisor>
+   <verticalSpeedDivisor>1</verticalSpeedDivisor>
+   <missileFlySpeed>2000</missileFlySpeed>
+   <text1>3</text1>
+   <text2>2</text2>
+   <text3>1</text3>
+   <text4>GO!</text4>
+   <textTime>1</textTime>
+
+   <youWon>You won!</youWon>
+   <youLost>You lost!</youLost>
+   <textYouMade>You made</textYouMade>
+   <textPreparetostart>Prepare to start!</textPreparetostart>
+   <textMeterstogo>meters to go!</textMeterstogo>
+   <textYouareinthelead>You are in the lead!</textYouareinthelead>
+   <textYouareintheback>You are in the back!</textYouareintheback>
+   
+   <opponents>
+    <opp>
+     <oppName>Yellos speedster</oppName>
+     <oppDescription>Si no puedes vencerlo, ¡ los arrancones no son lo tuyo !</oppDescription>
+     <oppPic>0</oppPic>
+     <oppMaxSpeedMulti>2</oppMaxSpeedMulti>
+     <oppMaxSpeedBase>500</oppMaxSpeedBase>
+     <oppAcceleration>150</oppAcceleration>
+     <missileFrequency>2</missileFrequency>
+     <nitroFrequency>5</nitroFrequency>
+     <raceLength>20000</raceLength>
+     <obstacleDist>2000</obstacleDist>
+    </opp>
+    <opp>
+     <oppName>Police 103</oppName>
+     <oppDescription>¡Los arrancones están prohibidos en esta ciudad! Te vamos a atrapar muy pronto</oppDescription>
+     <oppPic>1</oppPic>
+     <oppMaxSpeedMulti>2</oppMaxSpeedMulti>
+     <oppMaxSpeedBase>500</oppMaxSpeedBase>
+     <oppAcceleration>190</oppAcceleration>
+     <missileFrequency>1</missileFrequency>
+     <nitroFrequency>10</nitroFrequency>
+     <raceLength>10000</raceLength>
+     <obstacleDist>800</obstacleDist>
+    </opp>
+    <opp>
+     <oppName>The cocodrile man</oppName>
+     <oppDescription>Tan rápido como un cocodrilo</oppDescription>
+     <oppPic>3</oppPic>
+     <oppMaxSpeedMulti>2</oppMaxSpeedMulti>
+     <oppMaxSpeedBase>1800</oppMaxSpeedBase>
+     <oppAcceleration>220</oppAcceleration>
+     <missileFrequency>5</missileFrequency>
+     <nitroFrequency>10</nitroFrequency>
+     <raceLength>20000</raceLength>
+     <obstacleDist>800</obstacleDist>
+    </opp>
+    <opp>
+     <oppName>The King</oppName>
+     <oppDescription>El más rápido. El mejor. Veamos si lo puedes vencer</oppDescription>
+     <oppPic>2</oppPic>
+     <oppMaxSpeedMulti>3</oppMaxSpeedMulti>
+     <oppMaxSpeedBase>1800</oppMaxSpeedBase>
+     <oppAcceleration>280</oppAcceleration>
+     <missileFrequency>5</missileFrequency>
+     <nitroFrequency>15</nitroFrequency>
+     <raceLength>30000</raceLength>
+     <obstacleDist>800</obstacleDist>
+    </opp>
+    <opp>
+     <oppName>Chrysler Jeep</oppName>
+     <oppDescription>Pruébate contra un Jeep.</oppDescription>
+     <oppPic>7</oppPic>
+     <oppMaxSpeedMulti>3</oppMaxSpeedMulti>
+     <oppMaxSpeedBase>1200</oppMaxSpeedBase>
+     <oppAcceleration>190</oppAcceleration>
+     <missileFrequency>4</missileFrequency>
+     <nitroFrequency>8</nitroFrequency>
+     <raceLength>18000</raceLength>
+     <obstacleDist>800</obstacleDist>
+    </opp>
+    <opp>
+     <oppName>Pink car</oppName>
+     <oppDescription>Mídete contra la mejor de nuestras corredoras</oppDescription>
+     <oppPic>4</oppPic>
+     <oppMaxSpeedMulti>3</oppMaxSpeedMulti>
+     <oppMaxSpeedBase>1200</oppMaxSpeedBase>
+     <oppAcceleration>210</oppAcceleration>
+     <missileFrequency>4</missileFrequency>
+     <nitroFrequency>8</nitroFrequency>
+     <raceLength>12000</raceLength>
+     <obstacleDist>1000</obstacleDist>
+    </opp>
+    <opp>
+     <oppName>Green car</oppName>
+     <oppDescription>Solo tienes un Nitro y un misil. Úsalos sabiamente.</oppDescription>
+     <oppPic>5</oppPic>
+     <oppMaxSpeedMulti>3</oppMaxSpeedMulti>
+     <oppMaxSpeedBase>1200</oppMaxSpeedBase>
+     <oppAcceleration>190</oppAcceleration>
+     <missileFrequency>5000</missileFrequency>
+     <nitroFrequency>5000</nitroFrequency>
+     <raceLength>18000</raceLength>
+     <obstacleDist>1800</obstacleDist>
+    </opp>
+    <opp>
+     <oppName>Red car</oppName>
+     <oppDescription>El más veloz. Pero tendrás muchos misiles para detenerlo, claro, si lo alcanzas.</oppDescription>
+     <oppPic>6</oppPic>
+     <oppMaxSpeedMulti>3</oppMaxSpeedMulti>
+     <oppMaxSpeedBase>1200</oppMaxSpeedBase>
+     <oppAcceleration>190</oppAcceleration>
+     <missileFrequency>1</missileFrequency>
+     <nitroFrequency>10</nitroFrequency>
+     <raceLength>18000</raceLength>
+     <obstacleDist>2000</obstacleDist>
+    </opp>
+   </opponents>
+</cars>

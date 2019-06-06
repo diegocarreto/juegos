@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<school>
+ <maintitle>The main title of the game</maintitle>
+ <subtitle>Sub title and instructions
+ can have several lines
+ like this
+ and this
+ </subtitle>
+ <startbutton>Start!</startbutton>
+ <tuneWaitTime>500</tuneWaitTime>
+ <playbutton>Start!</playbutton>
+ <presstostart>Press yellow button to see sequence!</presstostart>
+ <payattention>PAY ATTENTION!</payattention>
+ <repeat>Now repeat the sequence!</repeat>
+ <missed>Missed! Try Again!</missed>
+ <youwonline1>CONGRATULATIONS!</youwonline1>
+ <youwonline2>YOU WON THE GAME!</youwonline2>
+ <youloseline1>Oh no!</youloseline1>
+ <youloseline2>No more lives left!</youloseline2>
+ 
+ 
+ <badge1>GOOD!</badge1>
+ <badge2>CLEVER!</badge2>
+ <badge3>BRILLIANT!</badge3>
+ <badge4>AWESOME!</badge4>
+ <badge5>GENIAL!</badge5>
+ 
+    <levels>
+    <level>
+     <cards>1</cards>
+     <startlength>1</startlength>
+    </level>
+    <level>
+     <cards>1</cards>
+     <startlength>1</startlength>
+    </level>
+    <level>
+     <cards>1</cards>
+     <startlength>1</startlength>
+    </level>
+    <level>
+     <cards>1</cards>
+     <startlength>1</startlength>
+    </level>
+    <level>
+     <cards>1</cards>
+     <startlength>1</startlength>
+    </level>
+    <level>
+     <cards>1</cards>
+     <startlength>1</startlength>
+    </level>
+    <level>
+     <cards>1</cards>
+     <startlength>1</startlength>
+    </level>
+    <level>
+     <cards>1</cards>
+     <startlength>1</startlength>
+    </level>
+    <level>
+     <cards>1</cards>
+     <startlength>1</startlength>
+    </level>
+    <level>
+     <cards>1</cards>
+     <startlength>1</startlength>
+    </level>
+   </levels>
+</school>

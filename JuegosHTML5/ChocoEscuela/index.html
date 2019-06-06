@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>                
+    <meta charset="UTF-8" />
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+	<title>school game</title>
+	<style type="text/css">
+		body {
+			background-color: black;
+			color: white;
+			padding: 0;
+			margin: 0;
+			overflow: hidden;
+		}
+		canvas {
+			-ms-touch-action: none;
+		}
+	</style>
+	
+  <script type="text/javascript">  
+
+  var functionName = "mexico";
+  var q = "hungary";
+
+  function tellq()
+  {
+   return q;
+  }
+  
+  function tellfn()
+  {
+   return functionName;
+  }
+  
+  function mexico(q,p,b)
+  {
+   alert("Score received. Your points: " + p + " Your badges: " + b);
+  }
+
+
+</script> 
+
+</head> 
+ 
+<body> 
+	<div id="fb-root"></div>
+	<div style="text-align: center;">
+
+		<div id="c2canvasdiv" style="width: 900px; height: 450px;">
+			<canvas id="c2canvas" width="900" height="450">
+			</canvas>
+		</div>
+	</div>
+	
+	<script src="jquery-2.0.0.min.js"></script>
+
+
+	<script src="c2runtime.js"></script>
+
+    <script>
+		function updateCanvasSize()
+		{
+			var w = jQuery(window).width();
+			var h = jQuery(window).height();
+			cr_sizeCanvas(w, h);
+		};
+		
+		var resizeIntervalId = -1;
+		
+		jQuery(window).resize(function() {
+			if (window.c2resizestretchmode === 1)
+			{
+				window.c2resizestretchmode = 2;
+				var canvas = document.getElementById("c2canvas");
+				window.c2oldcanvaswidth = canvas.width;
+				window.c2oldcanvasheight = canvas.height;
+				window.c2eventtime = Date.now();
+				updateCanvasSize();
+				
+				resizeIntervalId = setInterval(updateCanvasSize, 250);
+				setTimeout(function () {
+					clearInterval(resizeIntervalId);
+					resizeIntervalId = -1;
+				}, 1600);
+			}
+			else if (window.c2resizestretchmode === 2)
+			{
+				if (resizeIntervalId === -1)
+				{
+					window.c2resizestretchmode = 0;
+					cr_sizeCanvas(window.c2oldcanvaswidth, window.c2oldcanvasheight);
+				}
+			}
+		});
+	
+		jQuery(document).ready(function ()
+		{
+			cr_createRuntime("c2canvas");
+		});
+		
+		function onVisibilityChanged() {
+			if (document.hidden || document.mozHidden || document.webkitHidden || document.msHidden)
+				cr_setSuspended(true);
+			else
+				cr_setSuspended(false);
+		};
+		
+		document.addEventListener("visibilitychange", onVisibilityChanged, false);
+		document.addEventListener("mozvisibilitychange", onVisibilityChanged, false);
+		document.addEventListener("webkitvisibilitychange", onVisibilityChanged, false);
+		document.addEventListener("msvisibilitychange", onVisibilityChanged, false);
+    </script>
+</body> 
+</html> 

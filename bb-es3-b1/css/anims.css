@@ -1,0 +1,318 @@
+@font-face {
+    font-family: 'lobster';
+    src: url('fonts/lobster-webfont.eot');
+    src: url('fonts/lobster-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/lobster-webfont.woff') format('woff'),
+         url('fonts/lobster-webfont.ttf') format('truetype'),
+         url('fonts/lobster-webfont.svg#lobster') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.divFondo{
+	width: 100%;
+	height: 110%;
+	position: absolute;
+	display: inline-block;
+	z-index: -2000;
+	margin-top: -120px;
+	overflow-x: hidden; 
+}
+.cosmo{
+	width: 4096px;
+	height: 100%;
+	background-image: url("../img/spacebg.jpg");
+	position: absolute;
+}
+/*++++ Posiciones iniciales +++++*/
+#splash, .rescataletras,.spaceship, .motor2, .motor1{
+	position: absolute;
+}
+
+.spaceship{
+	margin: -70px 0 0 20%;
+	display: block;
+	z-index: 2;
+}
+.motor1{
+	margin: 200px 0 0 -50px;
+	width:150px;
+	height:52px;
+	background-image: url("../img/sprite-flamebig.png");
+	z-index: -1;
+}
+.motor2{
+	margin: 29px 0 0 -70px;
+	width:100px;
+	height:35px;
+	background-image: url("../img/sprite-flame.png");
+	z-index: -1;
+}
+
+.rescataletras{
+	display: block;
+	float: right;
+	margin: 230px 0 0 200px;
+	z-index: 6;
+}
+
+/* Posiciones asteroides*/
+.letteroids{
+	font-family: 'lobster';
+	color: #aaa;
+}
+.ltUno{
+	font-size: 120px;
+	margin: -200px 0 0 0;
+	position: absolute;
+}
+.ltDos{
+	font-size: 90px;
+	margin: -130px 0 0 0;
+	position: absolute;
+	z-index: 5;
+}
+.ltTres{
+	font-size: 130px;
+	margin: -50px 0 0 0;
+	position: absolute;
+}
+.ltCuatro{
+	font-size: 110px;
+	margin: 0 0 0 0;
+	position: absolute;
+}
+.ltCinco{
+	font-size: 180px;
+	margin: 50px 0 0 0;
+	position: absolute;
+	z-index: 5;
+
+}
+.ltSeis{
+	font-size: 210px;
+	margin: 130px 0 0 0;
+	position: absolute;
+	z-index: 5;
+
+}
+.ltSiete{
+	font-size: 150px;
+	margin: 220px 0 0 0;
+	position: absolute;
+}
+/* ++++  Asignaciones  +++ */
+
+.spaceship{
+	-webkit-animation: navega 1s ease-out;
+	   -moz-animation: navega 1s ease-out;
+	     -o-animation: navega 1s ease-out;
+   		    animation: navega 1s ease-out;
+}
+.motor1{
+	-webkit-animation: titilaBig .1s steps(8) infinite;
+       -moz-animation: titilaBig .1s steps(8) infinite;
+         -o-animation: titilaBig .1s steps(8) infinite;
+            animation: titilaBig .1s steps(8) infinite;
+}
+.motor2{
+	-webkit-animation: titila .1s steps(8) infinite;
+       -moz-animation: titila .1s steps(8) infinite;
+         -o-animation: titila .1s steps(8) infinite;
+            animation: titila .1s steps(8) infinite;
+}
+
+/*.cosmo{
+	-webkit-animation: cosmoSlow 30s linear infinite;
+	-moz-animation: cosmoSlow 30s linear infinite;
+	-o-animation: cosmoSlow 30s linear infinite;  
+    animation: cosmoSlow 30s linear infinite;
+}*/
+
+.ltUno{
+	-webkit-animation: asteroid 3s  ease infinite;
+	-moz-animation: asteroid 3s  ease infinite;
+	-o-animation: asteroid 3s  ease infinite;  
+    animation: asteroid 3s  ease infinite;
+}
+
+.ltDos{
+	-webkit-animation: asteroid 6s  ease infinite;
+	-moz-animation: asteroid 6s  ease infinite;
+	-o-animation: asteroid 6s  ease infinite;  
+    animation: asteroid 6s  ease infinite;
+}
+.ltTres{
+	-webkit-animation: asteroid 8s  ease infinite; 
+	-moz-animation: asteroid 8s  ease infinite; 
+	-o-animation: asteroid 8s  ease infinite;  
+    animation: asteroid 8s  ease infinite;
+}
+.ltCuatro{
+	-webkit-animation: asteroid 5s  ease infinite;
+	-moz-animation: asteroid 5s  ease infinite;
+	-o-animation: asteroid 5s  ease infinite;  
+    animation: asteroid 5s  ease infinite;
+}
+.ltCinco{
+	-webkit-animation: asteroid 7s  ease infinite;
+	-moz-animation: asteroid 7s  ease infinite;
+	-o-animation: asteroid 7s  ease infinite;  
+    animation: asteroid 7s  ease infinite;
+}
+
+.ltSeis{
+	-webkit-animation: asteroid 4s  ease infinite;
+	-moz-animation: asteroid 4s  ease infinite;
+	-o-animation: asteroid 4s  ease infinite;  
+    animation: asteroid 4s  ease infinite;
+}
+.ltSiete{
+	-webkit-animation: asteroid 9s  ease infinite;
+	-moz-animation: asteroid 9s  ease infinite;
+	-o-animation: asteroid 9s  ease infinite;  
+    animation: asteroid 9s  ease infinite;
+}
+/* ++++  Animaciones  +++ */
+
+/* Nave */
+
+@-webkit-keyframes navega {
+    from{margin-left:-100%;}
+	to{margin-left:20%;}
+}
+@-moz-keyframes navega {
+    from{margin-left:-100%;}
+	to{margin-left:20%;}
+}
+
+@-o-keyframes navega {
+    from{margin-left:-100%;}
+	to{margin-left:20%;}
+}
+@keyframes navega {
+    from{margin-left:-100%;}
+	to{margin-left:20%;}
+}
+
+/* Propulsor Med*/
+
+@-webkit-keyframes titila {
+	from { background-position:    0px; }
+     to { background-position: -800px; }  
+}
+@-moz-keyframes titila {
+	from { background-position:    0px; }
+     to { background-position: -800px; }  
+}
+@-o-keyframes titila {
+	from { background-position:    0px; }
+     to { background-position: -800px; }  
+}
+@keyframes titila {
+	from { background-position:    0px; }
+     to { background-position: -800px; }
+}
+/* Propulsor Grande*/
+
+@-webkit-keyframes titilaBig {
+	from { background-position:    0px; }
+     to { background-position: -1200px; }  
+}
+@-moz-keyframes titilaBig {
+	from { background-position:    0px; }
+     to { background-position: -1200px; }  
+}
+@-o-keyframes titilaBig {
+	from { background-position:    0px; }
+     to { background-position: -1200px; }  
+}
+@keyframes titilaBig {
+	from { background-position:    0px; }
+     to { background-position: -1200px; }
+}
+
+/* Cosmo */
+
+@-webkit-keyframes cosmoSlow {
+    from{
+    	left:0;
+    }
+	to{
+		left:-2048px;
+	}
+}
+/* Letteroids */
+
+@-webkit-keyframes asteroid {
+    from{
+    	left:1920px;
+    	-webkit-transform: rotate(0deg);
+    	-moz-transform: rotate(0deg);
+    	-ms-transform: rotate(0deg);
+    	-o-transform: rotate(0deg);
+    	transform: rotate(0deg);
+    }
+	to{
+		left:-900px;
+		-webkit-transform: rotate(180deg);
+    	-moz-transform: rotate(180deg);
+    	-ms-transform: rotate(180deg);
+    	-o-transform: rotate(180deg);
+    	transform: rotate(180deg);
+	}
+}
+@-moz-keyframes asteroid {
+    from{
+    	left:1920px;
+    	-webkit-transform: rotate(0deg);
+    	-moz-transform: rotate(0deg);
+    	-ms-transform: rotate(0deg);
+    	-o-transform: rotate(0deg);
+    	transform: rotate(0deg);
+    }
+	to{
+		left:-900px;
+		-webkit-transform: rotate(180deg);
+    	-moz-transform: rotate(180deg);
+    	-ms-transform: rotate(180deg);
+    	-o-transform: rotate(180deg);
+    	transform: rotate(180deg);
+	}
+}
+@-o-keyframes asteroid {
+    from{
+    	left:1920px;
+    	-webkit-transform: rotate(0deg);
+    	-moz-transform: rotate(0deg);
+    	-ms-transform: rotate(0deg);
+    	-o-transform: rotate(0deg);
+    	transform: rotate(0deg);
+    }
+	to{
+		left:-900px;
+		-webkit-transform: rotate(180deg);
+    	-moz-transform: rotate(180deg);
+    	-ms-transform: rotate(180deg);
+    	-o-transform: rotate(180deg);
+    	transform: rotate(180deg);
+	}
+}
+@keyframes asteroid {
+    from{
+    	left:1920px;
+    	-webkit-transform: rotate(0deg);
+    	-moz-transform: rotate(0deg);
+    	-ms-transform: rotate(0deg);
+    	-o-transform: rotate(0deg);
+    	transform: rotate(0deg);
+    }
+	to{
+		left:-900px;
+		-webkit-transform: rotate(180deg);
+    	-moz-transform: rotate(180deg);
+    	-ms-transform: rotate(180deg);
+    	-o-transform: rotate(180deg);
+    	transform: rotate(180deg);
+	}
+}

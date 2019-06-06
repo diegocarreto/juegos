@@ -1,0 +1,14 @@
+﻿IMPLEMENTACION.
+
+En cada cambio del archivo c2Runtime se debe cambiar las rutas absolutas por rutas “relativas” a los siguientes archivos y directorios:
+
+  -Images
+  -Media
+  -parameters.xml
+
+A continuación se listan las cadenas que se deben reemplazar.
+
+  -Reemplazar "media            por    pathGame + "media
+  -Reemplazar "parameters.xml   por    pathGame + "parameters.xml
+  -Reemplazar "images/          por    pathGame + "images/
+  -Reemplazar "logo.png         por    pathGame + "logo.png

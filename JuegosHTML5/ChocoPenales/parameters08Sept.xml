@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <penalty>
+     <webfont>Holtwood One SC</webfont>
+     
+     <mainTitle>Choco Penales</mainTitle>
+  
+     <start>Inicio</start>
+  
+     <instructions>Instrucciones</instructions>
+     <instructionsText>Tirar: La flecha amarilla indica en qué punto patearás el balón. Si le pegas en la base lo elevarás; si le pegas arriba saldrá un tiro recto. El tamaño de la flecha corresponde a la fuerza con la que patearás el balón. Lo puedes dirigir a cualquier zona de la portería.
+
+Parar: Cuando la máquina tira, el balón se detendrá para que veas que dirección lleva. Aparecen unos guantes que tendrás que colocar en la zona en la que creas que va a entrar el balón. Después, el tiro continúa su trayectoria.
+
+Gana el que tiene más goles acumulados. El juego termina al finalizar todos los tiros, o si el número de goles de un jugador ya no puede ser igualado o superado por el contrincante, por ejemplo: Vas tres cero a tu favor, esta es la tercera oportunidad de tu oponente y falla el tiro; como solo le quedan dos tiros ya es imposible que te empate o te gane, por lo que el juego termina.  
+
+</instructionsText>
+     
+     <player>Tú</player>
+     <computer>Máquina</computer>
+     <round>Ronda</round>
+     <goal>Goooooool</goal>
+     <saved>Atajada!</saved>
+     <crossbar>¡Poste!</crossbar>
+     <missed>¡Fallado!</missed>
+     
+     <ready>¿Listo?</ready>
+     
+     <pointSaved>100</pointSaved>
+     <pointGoal>50</pointGoal>
+     <pointCrossbar>20</pointCrossbar>
+     <pointOnTarget>20</pointOnTarget>
+     <pointWon>150</pointWon>
+     <pointTie>50</pointTie>
+     <pointLose>0</pointLose>
+
+     <compKickWaitTime>1000</compKickWaitTime>
+     
+     <youWon>Ganaste.
+</youWon>
+     <itsTie>Empate.
+</itsTie>
+     <youLose>Perdiste.
+</youLose>
+  
+     <youMade>Hiciste</youMade>
+     <points>puntos.</points>
+     
+     
+     <kicks>
+      <kick>
+       <vx>250</vx>
+       <vy>600</vy>
+      </kick>
+      <kick>
+       <vx>-250</vx>
+       <vy>600</vy>
+      </kick>
+      <kick>
+       <vx>350</vx>
+       <vy>650</vy>
+      </kick>
+      <kick>
+       <vx>-350</vx>
+       <vy>650</vy>
+      </kick>
+      <kick>
+       <vx>0</vx>
+       <vy>670</vy>
+      </kick>
+      <kick>
+       <vx>350</vx>
+       <vy>50</vy>
+      </kick>
+      <kick>
+       <vx>-350</vx>
+       <vy>50</vy>
+      </kick>
+      <kick>
+       <vx>150</vx>
+       <vy>660</vy>
+      </kick>
+      <kick>
+       <vx>-150</vx>
+       <vy>660</vy>
+      </kick>
+      <kick>
+       <vx>250</vx>
+       <vy>500</vy>
+      </kick>
+      <kick>
+       <vx>-250</vx>
+       <vy>500</vy>
+      </kick>
+      <kick>
+       <vx>500</vx>
+       <vy>710</vy>
+      </kick>
+      <kick>
+       <vx>-500</vx>
+       <vy>710</vy>
+      </kick>
+      <kick>
+       <vx>370</vx>
+       <vy>780</vy>
+      </kick>
+      <kick>
+       <vx>-370</vx>
+       <vy>780</vy>
+      </kick>
+     </kicks>
+  </penalty>

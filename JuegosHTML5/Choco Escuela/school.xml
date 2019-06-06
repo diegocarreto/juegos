@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<school>
+ <maintitle>Choco Memoria</maintitle>
+ <subtitle>Veamos que tan buena memoria tienes......
+Se presentará una secuencia de tarjetas. Cuando sea tu turno, haz click en el botó de ¡Inicia! y luego con el puntero del mouse selecciona la misma secuencia de tarjetas. Si te equivocas perderás una vida. ¡Tienes tres! Si logras vencer al juego, podrás medir que tan astuto eres.
+ 
+ </subtitle>
+ <startbutton>¡Inicia!</startbutton>
+ <tuneWaitTime>500</tuneWaitTime>
+ <playbutton>¡Inicia!</playbutton>
+ <presstostart>¡Haz click en el botón amarillo para continuar con la secuencia!</presstostart>
+ <payattention>¡ Pon mucha atención!</payattention>
+ <repeat>¡Ahora, repite la secuencia!</repeat>
+ <missed>¡Fallaste! Inténtalo nuevamente</missed>
+ <youwonline1>¡FELICIDADES!</youwonline1>
+ <youwonline2>¡HAS GANADO!</youwonline2>
+ <youloseline1>¡Oh no!</youloseline1>
+ <youloseline2>¡Se acabaron tus vidas!</youloseline2>
+ 
+ 
+ <badge1>¡Eres bueno!</badge1>
+ <badge2>¡ Eres Listo!</badge2>
+ <badge3>¡BRILLIANTE!</badge3>
+ <badge4>¡ASTUTO!</badge4>
+ <badge5>¡GENIAL!</badge5>
+ 
+ 
+   <levels>
+    <level>
+     <cards>2</cards>
+     <startlength>2</startlength>
+    </level>
+    <level>
+     <cards>3</cards>
+     <startlength>2</startlength>
+    </level>
+    <level>
+     <cards>4</cards>
+     <startlength>2</startlength>
+    </level>
+    <level>
+     <cards>5</cards>
+     <startlength>2</startlength>
+    </level>
+    <level>
+     <cards>6</cards>
+     <startlength>2</startlength>
+    </level>
+    <level>
+     <cards>6</cards>
+     <startlength>3</startlength>
+    </level>
+    <level>
+     <cards>6</cards>
+     <startlength>4</startlength>
+    </level>
+    <level>
+     <cards>6</cards>
+     <startlength>5</startlength>
+    </level>
+    <level>
+     <cards>6</cards>
+     <startlength>6</startlength>
+    </level>
+    <level>
+     <cards>6</cards>
+     <startlength>7</startlength>
+    </level>
+   </levels>
+</school>
